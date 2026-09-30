@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Онлайн Викторина және Тест Генераторы</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Тест Генераторы</h1>
+        
+        <!-- Сұрақ қосу формасы -->
+        <div id="quiz-builder">
+            <h2>Жаңа сұрақ енгізу</h2>
+            <input type="text" id="question" placeholder="Сұрақты жазыңыз">
+            <input type="text" id="opt1" placeholder="Вариант A">
+            <input type="text" id="opt2" placeholder="Вариант B">
+            <input type="text" id="opt3" placeholder="Вариант C">
+            <select id="correct">
+                <option value="0">Дұрыс жауап: A</option>
+                <option value="1">Дұрыс жауап: B</option>
+                <option value="2">Дұрыс жауап: C</option>
+            </select>
+            <button onclick="addQuestion()">Сұрақты сақтау</button>
+        </div>
+
+        <hr>
+
+        <!-- Тест өту бөлімі -->
+        <div id="quiz-section">
+            <h2>Викторина</h2>
+            <div id="quiz-container"></div>
+            <button onclick="submitQuiz()">Нәтижені тексеру</button>
+            <h3 id="result"></h3>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
